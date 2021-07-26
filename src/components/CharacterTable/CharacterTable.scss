@@ -1,0 +1,37 @@
+.character-table {
+	height: 650px;
+	overflow: auto;
+	padding-top: 30px;
+	img {
+		width: 130px;
+		height: 130px;
+	}
+	&__descriptions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			font-size: 16px;
+			color: black;
+			&:last-child {
+				padding-right: 40px;
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-top: 1px solid #bdbdbd;
+		cursor: pointer;
+		&:hover {
+			background: rgba(171, 171, 171, 0.1);
+		}
+	}
+	&__name, &__status {
+		font-size: 18px;
+	}
+	&__status {
+		margin-right: 30px;
+	}
+}

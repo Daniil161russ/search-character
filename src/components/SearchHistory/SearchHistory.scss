@@ -1,0 +1,25 @@
+.search-history{
+	height: 98vh;
+	border-left: 1px solid #bdbdbd;
+	h2 {
+		margin: 0 !important;
+		padding-top: 15px;
+		text-align: center;
+	}
+	&__list {
+		margin-top: 20px;
+		li {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			height: 40px;
+			&:hover {
+				background: rgba(171, 171, 171, 0.1);
+			}
+			span {
+				font-size: 18px;
+				margin-left: 20px;
+			}
+		}
+	}
+}

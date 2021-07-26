@@ -1,6 +1,4 @@
 .character-table {
-	height: 650px;
-	overflow: auto;
 	padding-top: 30px;
 	img {
 		width: 130px;
@@ -17,6 +15,10 @@
 				padding-right: 40px;
 			}
 		}
+	}
+	&__list {
+		height: 650px;
+		overflow: auto;
 	}
 	&__item {
 		display: flex;

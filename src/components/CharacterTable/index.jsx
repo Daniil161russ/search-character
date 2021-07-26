@@ -1,9 +1,8 @@
 import React from 'react'
 
 import './CharacterTable.scss'
-import avatarImg from '../../assets/img/test_img.png'
 
-const CharacterTable = () => {
+const CharacterTable = ({characters}) => {
 	return (
 		<div className="character-table">
 			<div className="character-table__descriptions">
@@ -11,15 +10,16 @@ const CharacterTable = () => {
 				<span>Имя</span>
 				<span>Статус</span>
 			</div>
-			<div className="character-table__item">
-				<img src={avatarImg} alt="avatar" className="character-table__avatar"/>
-				<span className="character-table__name">Вини Пух</span>
-				<span className="character-table__status">Активен</span>
-			</div>
-			<div className="character-table__item">
-				<img src={avatarImg} alt="avatar" className="character-table__avatar"/>
-				<span className="character-table__name">Вини Пух</span>
-				<span className="character-table__status">Активен</span>
+			<div className="character-table__list">
+				{characters &&
+					characters.map(character => (
+						<div className="character-table__item" key={character.id}>
+							<img src={character.image} alt="avatar" className="character-table__avatar"/>
+							<span className="character-table__name">{character.name}</span>
+							<span className="character-table__status">{character.status}</span>
+						</div>
+					))
+				}
 			</div>
 		</div>
 	)
